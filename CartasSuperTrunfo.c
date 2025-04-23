@@ -8,6 +8,7 @@ int main() {
     char cidade1 [20], cidade2 [20];
     int populacao1, populacao2, pontos_turisticos1, pontos_turisticos2;
     float area1, area2, pib1, pib2;
+    float densidade_populacional1, pib_per_capita1, densidade_populacional2, pib_per_capita2;
 
     printf("Bem vindo ao jogo Super Trunfo ! \n");
     printf("\nVamos começar inserindo os dados da primeira carta! \n");
@@ -33,8 +34,11 @@ int main() {
     printf("\nDigite o número de pontos turísticos da cidade: \n");
     scanf("%d" , &pontos_turisticos1);
 
+    densidade_populacional1 = populacao1 / area1;
+    pib_per_capita1 = pib1 / populacao1;
+
     printf("\nCarta 1: \n");
-    printf("\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %.3d\nÁrea: %.2f\nPIB: %.2f\nNúmeros de Pontos Turísticos: %d\n\n\n" , estado1, codigo1, cidade1, populacao1, area1, pib1, pontos_turisticos1);
+    printf("\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %.3d\nÁrea: %.2f km²\nPIB: %.2f\nNúmeros de Pontos Turísticos: %d\nDensidade Populacional: %.2f hab/km²\nPIB per CAPITA: %.2f reais\n\n\n" , estado1, codigo1, cidade1, populacao1, area1, pib1, pontos_turisticos1, densidade_populacional1, pib_per_capita1);
 
     
     printf("\n\n\nVamos agora inserir os dados da segunda carta! \n");
@@ -60,9 +64,12 @@ int main() {
     printf("\nDigite o número de pontos turísticos da cidade: \n");
     scanf("%d" , &pontos_turisticos2);
 
+    densidade_populacional2 = populacao2 / area2;
+    pib_per_capita2 = pib2 / populacao2;
+
        
     printf("\nCarta 2: \n");
-    printf("\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %.3d\nÁrea: %.2f\nPIB: %.2f\nNúmeros de Pontos Turísticos: %d\n\n\n" , estado2, codigo2, cidade2, populacao2, area2, pib2, pontos_turisticos2);
+    printf("\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %.3d\nÁrea: %.2f km²\nPIB: %.2f\nNúmeros de Pontos Turísticos: %d\nDensidade Populacional: %.2f hab/km²\nPIB per CAPITA: %.2f reais\n\n\n" , estado2, codigo2, cidade2, populacao2, area2, pib2, pontos_turisticos2, densidade_populacional2, pib_per_capita2);
 
 
     return 0;
